@@ -15,9 +15,4 @@ public class FlowerStoreSiteApplication {
 		SpringApplication.run(FlowerStoreSiteApplication.class, args);
 	}
 
-	@GetMapping()
-	public List<String> hello() {
-		return List.of("Hello", "World!");
-	}
-
 }
