@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class FlowerService {
@@ -17,7 +18,7 @@ public class FlowerService {
         return this.flowerRepository.findAll();
     }
 
-    public void addFlower(int id, double price, String description) {
-        this.flowerRepository.save(new Flower(id, price, description));
+    public void addFlower(double sepalLength, double price, String description) {
+        this.flowerRepository.save(new Flower(sepalLength, price, description));
     }
 }
